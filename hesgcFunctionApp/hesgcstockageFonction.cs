@@ -17,7 +17,7 @@ namespace hesgcFunctionApp
         {
             log.Info($"--------------- Processed message: <{myQueueItem}>");// For test
 
-            // test if message contains key word protocolVersion
+            // test if message contains key word <protocolVersion>
             if (myQueueItem.Contains("protocolVersion"))
             {
                 try
@@ -29,6 +29,7 @@ namespace hesgcFunctionApp
                                 log.Info($"{obj.ToString()}");
                             } 
                     */
+
                     // With TelemetryData object
                     TelemetryData obj = Newtonsoft.Json.JsonConvert.DeserializeObject<TelemetryData>(myQueueItem);
                     if (obj != null)
