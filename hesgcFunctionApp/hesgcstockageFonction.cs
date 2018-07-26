@@ -7,7 +7,7 @@ namespace hesgcFunctionApp
 {
     /*
     Exemple de <Application de fonction> (Function App) 
-    Cette fonction travaile sur une file d'attente Service Bus et pas sur le service de stockage
+    Cette fonction travaille sur une file d'attente Service Bus et pas sur le service de stockage
     Cette fonction est une copie, pour backup, de la fonction en ligne sur le compte Azure.
     */
     public static class hesgcstockageFonction
@@ -39,10 +39,10 @@ namespace hesgcFunctionApp
                         // Set connectionString for Azure SQL Server
                         SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder
                         {
-                            DataSource = "hesgcsqlserver.database.windows.net",// "your_server.database.windows.net";
-                            UserID = "hesgc", // "your_user";
-                            Password = "AdminHevs01", // "your_password";
-                            InitialCatalog = "hesgcDB" // "your_database";
+                            DataSource =  "your_server.database.windows.net",
+                            UserID = "your_user",
+                            Password = "your_password",
+                            InitialCatalog = "your_database"
                         };
                         SqlConnection sqlConnection = new SqlConnection(builder.ConnectionString);
                         sqlConnection.Open();
